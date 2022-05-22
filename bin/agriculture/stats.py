@@ -1,5 +1,3 @@
-
-from tokenize import String
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -42,14 +40,14 @@ columns_dic = {
 }
 
 
-def anova_result(dataset : pd.DataFrame, variable: String, ols_query: String, print_report = False, force_results = False):
+def anova_result(dataset : pd.DataFrame, variable: str, ols_query: str, print_report = False, force_results = False):
     """Runs Anova test for the selected variable on the group for a knowing set of contries
        Assumptions for ANOVA must be satisfied before running this function.
 
     Args:
         dataset (pd.DataFrame): Agricultural Dataframe
-        variable (String): variable in suty
-        ols_query (String): ols query for ANOVA
+        variable (str): variable in suty
+        ols_query (str): ols query for ANOVA
         print_report (bool, optional): Print report in standar output. Defaults to False.
         force_results (bool, optional): Force return results. Defaults to False.
 
@@ -180,12 +178,12 @@ def anova_paircomparison_ireland_oms(data: pd.DataFrame, variables: np.array, pl
     return results
     
 
-def kruskal_report(dataset: pd.DataFrame, variable: String):
+def kruskal_report(dataset: pd.DataFrame, variable: str):
     """Kruskal–Wallis one-way analysis of variance
 
     Args:
         dataset (pd.DataFrame): Agricultural Dataset
-        variable (String): variable in study
+        variable (str): variable in study
 
     Returns:
         _type_: _description_
